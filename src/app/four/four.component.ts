@@ -10,8 +10,10 @@ import {produit} from 'src/app/produit';
 export class FourComponent implements OnInit {
   @Input() Four:boolean;
  fours:produit[]=[
-   {name:'Galanz',description:' Four éléctrique de marque ganalz',prix:100,image:'Galanz.png'},
-   {name:'Kitchenaid',description:' Four éléctrique de marque kitchenaid',prix:100,image:'kitchenaid.png'},
+  new produit('Galanz',' Four éléctrique de marque ganalz',100,'Galanz.png'),
+   new produit('Kitchenaid',' Four éléctrique de marque kitchenaid',100,'kitchenaid.png'),
+   new produit('Kitchenaid',' Four éléctrique de marque kitchenaid',100,'kitchenaid.png'),
+   new produit('Galanz',' Four éléctrique de marque ganalz',100,'Galanz.png')
 
  ];
 

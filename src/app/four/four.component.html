@@ -1,13 +1,12 @@
-
-    <div class ="row" *ngIf="Four">
-    <div *ngFor="let produit of fours" class="card" style="width: 18rem;"  >
-    <img class="card-img-top" src="assets/Four/{{produit.image}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{produit.name}}</h5>
-      <p class="card-text">{{produit.description}}</p>
-      <h4>Prix:{{produit.prix}}D</h4>
-      <a href="#" class="btn btn-primary">Acheter</a>
+<div class="row" *ngIf="Four">
+  <div class="col-sm-4" *ngFor="let produit of fours" >
+    <div class="card" >
+      <img class="img-responsive" src="assets/Four/{{produit.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{produit.name}}</h5>
+        <p class="card-text">{{produit.description}}</p>
+        <a href="#" class="btn btn-primary">Acheter</a>
+      </div>
     </div>
   </div>
-
-</div>
+  </div>

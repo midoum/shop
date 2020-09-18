@@ -13,27 +13,27 @@ export class AppComponent {
  showsmart:boolean=false;
   title = 'shop';
   ToggleRef(){
-    this.showref=!this.showref;
+    this.showref=true;
     this.showordin=false;
     this.showfour=false;
     this.showsmart=false;
   }
   ToggleOrdin(){
-    this.showordin=!this.showordin;
+    this.showordin=true;
     this.showref=false; 
     this.showfour=false;
     this.showsmart=false;
   }
 
   ToggleFour(){
-    this.showfour=!this.showfour;
+    this.showfour=true;
     this.showref=false;
     this.showordin=false;
     this.showsmart=false;
   }
 
   ToggleSmart(){
-    this.showsmart=!this.showsmart;
+    this.showsmart=true;
     this.showref=false;
     this.showordin=false;
     this.showfour=false;
