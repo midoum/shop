@@ -3,9 +3,10 @@
     <div class="card" >
       <img class="img-responsive" src="assets/Ordinateur/{{produit.image}}" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{produit.name}}</h5>
+        <h5 class="card-title" id="prodname">{{produit.name}}</h5>
         <p class="card-text">{{produit.description}}</p>
-        <a href="#" class="btn btn-primary">Acheter</a>
+        <h4>{{produit.prix}}</h4>
+        <a  class="btn btn-primary" (click)='ajouter(produit.name,produit.prix,produit.description)'>Acheter</a>
       </div>
     </div>
   </div>

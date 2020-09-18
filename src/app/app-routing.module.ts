@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {SmartphoneComponent} from 'src/app/smartphone/smartphone.component';
-import {RefrigirateurComponent} from 'src/app/refrigirateur/refrigirateur.component';
-import {FourComponent} from 'src/app/four/four.component';
-import {OrdinateurComponent} from 'src/app/ordinateur/ordinateur.component';
+
+import { Routes, RouterModule, Router } from '@angular/router';
+import { AppComponent } from './app.component';
+
+import {ChariotComponent} from '../app/chariot/chariot.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 const routes: Routes = [
-  {path:'smartphone',component:SmartphoneComponent},
-  {path:'refrigirateur',component:RefrigirateurComponent},
-  {path:'four',component:FourComponent},
-  {path:'ordinateur',component:OrdinateurComponent},
+{path:'',component:AcceuilComponent},
+{path:'acceuil',component:AcceuilComponent},
+{path:'chariot',component:ChariotComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  constructor(){
+
+  }
+
+}

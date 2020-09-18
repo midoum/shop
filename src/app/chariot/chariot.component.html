@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="assets/logo.png" width="80" height="50" class="d-inline-block align-top" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+      
+   
+  </nav>
+<div class="row" >
+  <div class="col-sm-2" *ngFor="let produit of chariot" >
+    <div class="card" >
+      <img class="img-responsive" src="" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" >{{produit.name}}</h5>
+        <p class="card-text">{{produit.description}}</p>
+        <h4>{{produit.prix}}</h4>
+        
+      </div>
+    </div>
+  </div>
+  </div>
