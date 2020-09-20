@@ -1,4 +1,8 @@
+import { Injectable } from '@angular/core';
 import {produit} from './produit'
+@Injectable({
+    providedIn: 'root',
+  })
 export class chariotservice{
     private chariot:produit[];
     constructor(){
@@ -6,7 +10,6 @@ export class chariotservice{
     }
     addChariot(name,description,prix,url){
     this.chariot.push(new produit(name,description,prix,url));
-   
     }
     getChariot(){
         return this.chariot;

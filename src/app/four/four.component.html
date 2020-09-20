@@ -1,11 +1,12 @@
 <div class="row" *ngIf="Four">
   <div class="col-sm-4" *ngFor="let produit of fours" >
     <div class="card" >
-      <img class="img-responsive" src="assets/Four/{{produit.image}}" alt="Card image cap">
+      <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{produit.name}}</h5>
         <p class="card-text">{{produit.description}}</p>
-        <a href="#" class="btn btn-primary">Acheter</a>
+        <h4>{{produit.prix}}D</h4>
+        <a  class="btn btn-primary" (click)="ajouter(produit.name,produit.description,produit.prix,produit.image)">Acheter</a>
       </div>
     </div>
   </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Input} from '@angular/core';
 import {produit} from 'src/app/produit';
+import { chariotservice } from '../chariotservice';
+
 @Component({
   selector: 'app-four',
   templateUrl: './four.component.html',
@@ -9,6 +11,7 @@ import {produit} from 'src/app/produit';
 })
 export class FourComponent implements OnInit {
   @Input() Four:boolean;
+ 
  fours:produit[]=[
   new produit('Galanz',' Four éléctrique de marque ganalz',100,'Galanz.png'),
    new produit('Kitchenaid',' Four éléctrique de marque kitchenaid',100,'kitchenaid.png'),
@@ -20,11 +23,20 @@ export class FourComponent implements OnInit {
 ;
 
  
-  constructor() { 
+  constructor(private c:chariotservice) { 
 
   }
 
   ngOnInit(): void {
   }
-
+  ajouter(name,description,prix,url){
+ 
+     
+    this.c.addChariot(name,description,prix,url);
+    console.log(this.c.getChariot())
+  }
+   getCart(){
+ 
+   }
+  
 }

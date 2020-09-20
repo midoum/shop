@@ -1,7 +1,9 @@
 import { Component, ComponentFactoryResolver, Input, OnInit } from '@angular/core';
 import { produit } from '../produit';
-import { OrdinateurComponent } from '../ordinateur/ordinateur.component';
-let c=new OrdinateurComponent;
+
+import { chariotservice } from '../chariotservice';
+
+
 @Component({
   selector: 'app-chariot',
   templateUrl: './chariot.component.html',
@@ -10,8 +12,10 @@ let c=new OrdinateurComponent;
 
 export class ChariotComponent implements OnInit {
   chariot:produit[]=[];
-  constructor() { 
- this.chariot=c.getCart();
+  constructor(private c:chariotservice) { 
+ this.chariot=c.getChariot();
+ console.log(this.chariot)
+ 
     
  
  

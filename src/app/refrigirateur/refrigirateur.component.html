@@ -1,10 +1,13 @@
-
-    <div class="card" style="width: 18rem;" *ngIf="Refri">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+<div class="row" *ngIf="Refri">
+  <div class="col-sm-4" *ngFor="let produit of refrigirateur" >
+    <div class="card" >
+      <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" id="prodname">{{produit.name}}</h5>
+        <p class="card-text">{{produit.description}}</p>
+        <h4>{{produit.prix}}D</h4>
+        <a  class="btn btn-primary" (click)="ajouter(produit.name,produit.description,produit.prix,produit.image)">>Acheter</a>
       </div>
-   
+    </div>
+  </div>
+  </div>

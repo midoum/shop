@@ -10,6 +10,7 @@ import { SmartphoneComponent } from './smartphone/smartphone.component';
 import { ChariotComponent } from './chariot/chariot.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { chariotservice } from './chariotservice';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,15 +19,19 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
     OrdinateurComponent,
     SmartphoneComponent,
     ChariotComponent,
-    AcceuilComponent
+    AcceuilComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    chariotservice
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

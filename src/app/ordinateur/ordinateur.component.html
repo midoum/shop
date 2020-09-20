@@ -1,12 +1,12 @@
 <div class="row" *ngIf="Ordin">
   <div class="col-sm-4" *ngFor="let produit of ordins" >
     <div class="card" >
-      <img class="img-responsive" src="assets/Ordinateur/{{produit.image}}" alt="Card image cap">
+      <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title" id="prodname">{{produit.name}}</h5>
         <p class="card-text">{{produit.description}}</p>
-        <h4>{{produit.prix}}</h4>
-        <a  class="btn btn-primary" (click)='ajouter(produit.name,produit.prix,produit.description,produit.image)'>Acheter</a>
+        <h4>{{produit.prix}} D</h4>
+        <a  class="btn btn-primary"(click)="ajouter(produit.name,produit.description,produit.prix,produit.image)">>Acheter</a>
       </div>
     </div>
   </div>
