@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, Input, OnInit } from '@angular/core';
 import { produit } from '../produit';
-
-var n,d,p:any;
+import { OrdinateurComponent } from '../ordinateur/ordinateur.component';
+let c=new OrdinateurComponent;
 @Component({
   selector: 'app-chariot',
   templateUrl: './chariot.component.html',
@@ -9,25 +9,18 @@ var n,d,p:any;
 })
 
 export class ChariotComponent implements OnInit {
-
+  chariot:produit[]=[];
   constructor() { 
-    this.chariot.push(new produit(n,d,p,''));
- 
+ this.chariot=c.getCart();
     
+ 
+ 
   }
 
- chariot:produit[]=[
-  
-  ];
+
 
   ngOnInit(): void {
-   
+  
   }
- Inserer(name,prix,description){
-  n=name;
-  p=prix;
-  d=description;
-  new ChariotComponent();
-  console.log(this.chariot);
-};
+  
 }
