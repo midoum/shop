@@ -1,5 +1,5 @@
 <div class="row" *ngIf="Refri">
-  <div class="col-sm-4" *ngFor="let produit of refrigirateur" >
+  <div *ngFor="let produit of refrigirateur" >
     <div class="card" >
       <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
       <div class="card-body">
