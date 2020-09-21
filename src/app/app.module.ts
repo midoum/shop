@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatBadgeModule} from '@angular/material';
+import {MatBadgeModule} from '@angular/material'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RefrigirateurComponent } from './refrigirateur/refrigirateur.component';
@@ -24,6 +24,7 @@ import { chariotservice } from './chariotservice';
   
   ],
   imports: [
+    MatBadgeModule,
     BrowserModule,
     AppRoutingModule
   ],
