@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {MatBadgeModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RefrigirateurComponent } from './refrigirateur/refrigirateur.component';
@@ -11,6 +11,7 @@ import { ChariotComponent } from './chariot/chariot.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { chariotservice } from './chariotservice';
+
 @NgModule({
   declarations: [
     AppComponent,
