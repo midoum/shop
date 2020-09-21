@@ -24,7 +24,7 @@ import { chariotservice } from './chariotservice';
   
   ],
   imports: [
-    MatBadgeModule,
+    
     BrowserModule,
     AppRoutingModule
   ],
