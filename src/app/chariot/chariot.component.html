@@ -7,16 +7,24 @@
       
    
   </nav>
-<div class="row" >
+  <div class="container">
+<table class="table table-hover" >
+  <thead>
+  <tr >
+    <th> Nom</th>
+    <th>Prix</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let produit of chariot">
+    <td>{{produit.name}}</td>
+    <td>{{produit.prix}}D</td>
 
-  <div class="card" style="width: 18rem;" *ngFor="let produit of chariot">
-    <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title" id="prodname">{{produit.name}}</h5>
-    
-      <h4>{{produit.prix}}D</h4>
-    
-    </div>
-  </div>
-
+  </tr>
+  <tr>
+    <td>Somme</td>
+    <td>{{SommeProduit()}}D </td>
+  </tr>
+</tbody>
+</table>
 </div>

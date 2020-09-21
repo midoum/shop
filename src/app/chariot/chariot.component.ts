@@ -26,5 +26,12 @@ export class ChariotComponent implements OnInit {
   ngOnInit(): void {
   
   }
-  
+  SommeProduit(){
+    var somme =0;
+    for(var i=0;i<this.chariot.length;i++){
+      var prod=this.chariot[i];
+      somme+=this.chariot[i].prix;
+    }
+    return somme;
+  }
 }
