@@ -11,12 +11,14 @@ import { chariotservice } from '../chariotservice';
 })
 
 export class ChariotComponent implements OnInit {
+
   chariot:produit[]=[];
+ 
   constructor(private c:chariotservice) { 
  this.chariot=c.getChariot();
  console.log(this.chariot)
  
-    
+ 
  
  
   }
@@ -33,5 +35,18 @@ export class ChariotComponent implements OnInit {
       somme+=this.chariot[i].prix;
     }
     return somme;
+  }
+  addindex(){
+    for(var i=0;i<this.chariot.length;i++){
+      return this.chariot.length;
+    
+    }
+  }
+    
+  
+  Supprimer(){
+
+   
+    
   }
 }

@@ -11,9 +11,9 @@ import { produit } from '../produit';
 export class RefrigirateurComponent implements OnInit {
   @Input() Refri:boolean;
   refrigirateur:produit[]=[
-    new produit('samsung','un grand refrigirateur de mark samsung avec un dispencer des cubes de glâce ',2500,'samsung.png'),
-    new produit('samsung','un mini-fridge de mark silver mini  ',700,'silvermini.png'),
-    new produit('samsung','un grand refrigirateur de mark Whirlpool avec un dispencer des cubes de glâce ',2800,'whirlpool.png'),
+    new produit('samsung','un grand refrigirateur de mark samsung avec un dispencer des cubes de glâce ',2500,'samsung.png',0),
+    new produit('samsung','un mini-fridge de mark silver mini  ',700,'silvermini.png',0),
+    new produit('samsung','un grand refrigirateur de mark Whirlpool avec un dispencer des cubes de glâce ',2800,'whirlpool.png',0),
 
   ]
   constructor(private c:chariotservice) { }

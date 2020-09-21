@@ -9,7 +9,7 @@ export class chariotservice{
     this.chariot=[];
     }
     addChariot(name,description,prix,url){
-    this.chariot.push(new produit(name,description,prix,url));
+    this.chariot.push(new produit(name,description,prix,url,1));
     }
     getChariot(){
         return this.chariot;

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatBadgeModule} from '@angular/material/badge'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,13 +22,18 @@ import { chariotservice } from './chariotservice';
     SmartphoneComponent,
     ChariotComponent,
     AcceuilComponent,
+    
   
   ],
   imports: [
-    
+   
+    MatBadgeModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   
   ],
+  exports: [MatBadgeModule],
+ 
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     chariotservice

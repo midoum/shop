@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { chariotservice } from '../chariotservice';
+
 
 @Component({
   selector: 'app-acceuil',
@@ -6,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acceuil.component.css']
 })
 export class AcceuilComponent implements OnInit {
+  @Input() matBadge:number;
   showref:boolean=false;
   showordin:boolean=true;
   showfour:boolean=false;
   showsmart:boolean=false;
   
-  constructor() { 
+  constructor( private c:chariotservice) { 
   
   }
 
@@ -44,4 +47,10 @@ export class AcceuilComponent implements OnInit {
     this.showfour=false;
     
   }
-}
+  getValue(){
+  var f=this.c.getChariot().length;
+  return f;  
+   
+
+  }
+  }
