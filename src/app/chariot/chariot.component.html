@@ -8,14 +8,15 @@
    
   </nav>
 <div class="row" >
-  <div class="col-sm-2" *ngFor="let produit of chariot" >
-    <div class="card" >
-      <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title" >{{produit.name}}</h5>
-        <h4>{{produit.prix}} D</h4>
-        
-      </div>
+
+  <div class="card" style="width: 18rem;" *ngFor="let produit of chariot">
+    <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" id="prodname">{{produit.name}}</h5>
+    
+      <h4>{{produit.prix}}D</h4>
+    
     </div>
   </div>
-  </div>
+
+</div>

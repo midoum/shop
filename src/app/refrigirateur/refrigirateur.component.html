@@ -1,6 +1,6 @@
 <div class="row" *ngIf="Refri">
-  <div *ngFor="let produit of refrigirateur" >
-    <div class="card" >
+
+    <div class="card" style="width: 18rem;" *ngFor="let produit of refrigirateur">
       <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title" id="prodname">{{produit.name}}</h5>
@@ -9,5 +9,5 @@
         <a  class="btn btn-primary" (click)="ajouter(produit.name,produit.description,produit.prix,produit.image)">>Acheter</a>
       </div>
     </div>
-  </div>
+  
   </div>
