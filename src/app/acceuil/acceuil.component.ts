@@ -10,6 +10,7 @@ export class AcceuilComponent implements OnInit {
   showordin:boolean=true;
   showfour:boolean=false;
   showsmart:boolean=false;
+  
   constructor() { 
   
   }
