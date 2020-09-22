@@ -12,6 +12,7 @@ import { ChariotComponent } from './chariot/chariot.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { chariotservice } from './chariotservice';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { chariotservice } from './chariotservice';
     SmartphoneComponent,
     ChariotComponent,
     AcceuilComponent,
+    LoginComponent,
     
   
   ],

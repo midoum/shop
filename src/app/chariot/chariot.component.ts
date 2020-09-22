@@ -44,7 +44,9 @@ export class ChariotComponent implements OnInit {
   }
     
   
-  Supprimer(){
+  Supprimer(index){
+    this.chariot.splice(index,1);
+    console.log(index);
 
    
     

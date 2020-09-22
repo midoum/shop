@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 
 import {ChariotComponent} from '../app/chariot/chariot.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-{path:'',component:AcceuilComponent},
+{path:'',component:LoginComponent},
 {path:'acceuil',component:AcceuilComponent},
 {path:'chariot',component:ChariotComponent}
 ];

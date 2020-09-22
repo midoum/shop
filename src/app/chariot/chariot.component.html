@@ -20,11 +20,11 @@
   </tr>
 </thead>
 <tbody>
-  <tr *ngFor="let produit of chariot" id="rownumber" (click)="Supprimer()">
+  <tr *ngFor="let produit of chariot;let i=index;" id="rownumber" >
     <td>{{produit.name}}</td>
     <td>{{produit.prix}}D</td>
     
-    <td><button class="btn btn-warning" >-</button> </td>
+    <td><button class="btn btn-warning"  (click)="Supprimer(i)">-</button> </td>
     
 
   </tr>
