@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import * as firebase from 'firebase';
+import { AuthService } from '../Authservice';
+
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,23 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 export class LoginComponent implements OnInit {
 @Input() sc:boolean=true;
 @Input() si:boolean=false;
-public books: FirebaseListObservable<Book[]>;
 
-  constructor( private router:Router) { }
+
+  constructor( private router:Router,private authservice:AuthService ) {
+    const config = {
+      apiKey: "AIzaSyCes1086y_q4-mpWHXBg1e2wkprD6YWXX8",
+      authDomain: "shop-b2639.firebaseapp.com",
+      databaseURL: "https://shop-b2639.firebaseio.com",
+      projectId: "shop-b2639",
+      storageBucket: "shop-b2639.appspot.com",
+      messagingSenderId: "909077061093",
+      appId: "1:909077061093:web:1a5d5976be1ff6423fe30c",
+      measurementId: "G-CV7R0GWGX2"
+    };
+    firebase.initializeApp(config);
+  
+
+  }
 
   ngOnInit(): void {
   }
@@ -30,7 +45,14 @@ if(emailc==""){
   }else{  
     if(emailc.match("@")){
     alert("Connexion avec succès")
-    this.router.navigate(['/acceuil']);
+    this.authservice.signInUser(emailc,passc).then(()=>{
+      this.router.navigate(['/acceuil']);
+    },(error)=>{
+      console.log(error);
+      
+    }
+    );
+   
   }else {
     alert("l'email doit contenir @")
   }
@@ -62,7 +84,17 @@ showI(){
       alert("Les mots de passe doivent être conforme")
   }else {
      if(emaili.match("@")){
-      alert("Connexion avec succès")
+      this.authservice.createNewUser(emaili,passi).then(()=>{
+        alert("Utilisateur crée avec succès")
+      },
+
+        (error)=>{
+console.log(error);
+        
+      });
+     
+      
+
     }else {
       alert("l'email doit contenir @")
     

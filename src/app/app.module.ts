@@ -12,8 +12,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { chariotservice } from './chariotservice';
 import { LoginComponent } from './login/login.component';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AuthService } from './Authservice';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCes1086y_q4-mpWHXBg1e2wkprD6YWXX8",
@@ -44,15 +44,15 @@ const firebaseConfig = {
     MatBadgeModule,
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule,
+   
    
   ],
   exports: [MatBadgeModule],
  
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
-    chariotservice
+    chariotservice,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
