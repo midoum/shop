@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { Router, RouterLink } from '@angular/router';
 export class LoginComponent implements OnInit {
 @Input() sc:boolean=true;
 @Input() si:boolean=false;
-
+public books: FirebaseListObservable<Book[]>;
 
   constructor( private router:Router) { }
 
