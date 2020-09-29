@@ -4,6 +4,8 @@ import { produit } from '../produit';
 import { chariotservice } from '../chariotservice';
 
 
+
+
 @Component({
   selector: 'app-chariot',
   templateUrl: './chariot.component.html',
@@ -51,4 +53,5 @@ export class ChariotComponent implements OnInit {
    
     
   }
+
 }
