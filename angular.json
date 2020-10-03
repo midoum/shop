@@ -10,7 +10,9 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+     
         "build": {
+          
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/shop",
@@ -18,6 +20,20 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "allowedCommonJsDependencies": [
+              "rxjs-compat",
+              "lodash",
+              "firebase",
+                "@angular/common/locales/fr",
+               "lodash/dropRight",
+               "@firebase/app",
+                            "firebase/app",
+                            "@firebase/database",
+                            "@firebase/firestore",
+                            "@firebase/functions",
+                            "@firebase/performance",
+                            "@firebase/remote-config"
+           ],
             "aot": true,
             "assets": [
               "src/favicon.ico",
