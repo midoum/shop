@@ -3,7 +3,8 @@ import { produit } from '../produit';
 import * as firebase from 'firebase';
 import { chariotservice } from '../chariotservice';
 import { AngularFirestore} from '@angular/fire/firestore';
-import { AuthService } from '../Authservice';
+
+import { Router } from '@angular/router';
 
 
 
@@ -19,7 +20,7 @@ export class ChariotComponent implements OnInit {
 
   chariot:produit[]=[];
  
-  constructor(private c:chariotservice,private authservice:AuthService,) { 
+  constructor(private c:chariotservice,private router:Router) { 
     const config = {
       apiKey: "AIzaSyCes1086y_q4-mpWHXBg1e2wkprD6YWXX8",
       authDomain: "shop-b2639.firebaseapp.com",

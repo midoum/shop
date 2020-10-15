@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 
-import { Routes, RouterModule, Router } from '@angular/router';
-import { AppComponent } from './app.component';
-
+import { Routes, RouterModule, } from '@angular/router';
 import {ChariotComponent} from '../app/chariot/chariot.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
-import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
 {path:'',component:AcceuilComponent},
-{path:'login',component:LoginComponent},
 {path:'acceuil',component:AcceuilComponent},
-{path:'chariot',component:ChariotComponent}
+{path:'chariot',component:ChariotComponent},
+
+
+
 ];
 
 @NgModule({

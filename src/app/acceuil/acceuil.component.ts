@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { chariotservice } from '../chariotservice';
 
 
@@ -14,7 +15,7 @@ export class AcceuilComponent implements OnInit {
   showfour:boolean=false;
   showsmart:boolean=false;
   
-  constructor( private c:chariotservice) { 
+  constructor( private c:chariotservice,private router:Router) { 
   
   }
 
@@ -53,4 +54,5 @@ export class AcceuilComponent implements OnInit {
    
 
   }
+
   }
