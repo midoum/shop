@@ -22,17 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "allowedCommonJsDependencies": [
               "rxjs-compat",
-              "lodash",
-              "firebase",
-                "@angular/common/locales/fr",
-               "lodash/dropRight",
-               "@firebase/app",
-                            "firebase/app",
-                            "@firebase/database",
-                            "@firebase/firestore",
-                            "@firebase/functions",
-                            "@firebase/performance",
-                            "@firebase/remote-config"
+              "lodash"
+             
            ],
             "aot": true,
             "assets": [

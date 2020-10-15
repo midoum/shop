@@ -10,8 +10,8 @@
   <div class="filler">
 
   </div>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <img src="assets/logo.png" width="80" height="50" class="d-inline-block align-top" routerLink="acceuil" >
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark  ">
+    <img src="assets/logo.png" width="80" height="50" class="d-inline-block align-top" routerLink="/acceuil" >
     
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
@@ -39,7 +39,7 @@
       </ul>
     </div>
    
-    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" routerLink="/chariot" >
+    <button class="btn" type="submit" routerLink="/chariot" >
      
      <div class="badge" matBadge="{{getValue()}}"></div>
       <img src="assets/cart.png" width="30" height="30" class="d-inline-block align-top"  alt="">
@@ -83,25 +83,31 @@
     </div>
   </div>
 </div>
-  <div class="container" id="prods">
+  <div  id="prods">
+   
   <div class="row" id="products">
    
-    <div id="mainlist">
+    <div id="mainlist" class="col-sm-9">
       <app-refrigirateur [Refri]="showref"></app-refrigirateur>
       <app-ordinateur [Ordin]="showordin"></app-ordinateur>
       <app-four [Four]="showfour"></app-four>
       <app-smartphone [Smart]="showsmart"></app-smartphone>
     </div>
+    <div id="sidelist" class="col-sm-3">eaeaeaeze
+      azezaeaze
+    </div>
   </div>
+ 
 </div>
   
   <footer class="footer">
     <div class="container">
 <h3 > Creé par ahmed meskine</h3>
 
-<a class="btn btn-primary" href="https://www.github.com/midoum/shop" target="blank">Code Source</a>
+<a class="btn btn-primary" href="https://www.github.com/midoum/shop" target="blank" id="code">Code Source</a>
 
 </div>
   </footer>
+  
 </body>
 </html>

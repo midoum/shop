@@ -1,8 +1,26 @@
+
 .card{
     margin-top: 10px;
+    margin-bottom: 10px;
     height: auto;
+ 
+    width: 14rem;
+    
  }
- .card img{
+ .img-responsive{
      align-self: center;
-    width: 30%;
+    width: 15%;
+    transition: width 1s,height 1s;
  }
+ .card-text{
+     display: none;
+ }
+ .card-body:hover .card-text{
+    display: block;
+    
+
+   
+}
+.img-responsive:hover{
+    width: 35%;  
+}

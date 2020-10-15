@@ -8,17 +8,22 @@ body{
 }
 nav{
     height:auto;
+   
+    background-color:rgba(13, 14, 10, 0.493);
 }
+
+
 .filler{
     height: 50px;
   
 }
 .footer{
     height: 100px;
-    background-color: rgb(224, 215, 215);
+    background-color:rgba(22, 21, 21, 0.815);
+    color: white;
 }
 .container#prods{
-    background-color: white;
+    background-color: rgb(230, 221, 221);
     margin-bottom: 10%;
 }
 
@@ -48,8 +53,11 @@ margin-bottom: 100px;
    width: 35%;
      
     }
+    #sidemenu{
+     width: 20%;
+    }
    #products{
-    width: 100%;
+    width: auto;
     margin-left: 0;
    height: auto;
   
@@ -61,4 +69,12 @@ margin-bottom: 100px;
         background-color: red;
         border-radius: 10px;
     }
-    
+    .btn{
+        position: relative;
+        margin-left: 210px;
+    }
+    #code{
+        position: relative;
+        margin-left:0px;
+        background-color: rgb(74, 190, 74);
+    }

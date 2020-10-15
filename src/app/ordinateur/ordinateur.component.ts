@@ -12,8 +12,9 @@ import { chariotservice } from '../chariotservice';
   styleUrls: ['./ordinateur.component.css']
 })
 export class OrdinateurComponent implements OnInit {
+  
   @Input() Ordin:boolean;
- 
+  
  
   ordins :produit[]=[
 new produit('Dell core i5','Ordinateur pour travail et programming equipé du processeur intel core i5',1800,'Dellcorei5.png',0),
