@@ -24,10 +24,13 @@ export class AcceuilComponent implements OnInit {
         document.getElementById("navbar").style.backgroundColor = "transparent";
        
         document.getElementById("item").style.color = "black";
+        document.getElementById("item1").style.color = "black";
  
       } else {
-        document.getElementById("navbar").style.backgroundColor = "black";
+        document.getElementById("navbar").style.backgroundColor = "gray";
         document.getElementById("item").style.color = "white";
+        document.getElementById("item1").style.color = "white";
+       
         
        
         
