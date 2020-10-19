@@ -16,7 +16,25 @@ export class AcceuilComponent implements OnInit {
   showsmart:boolean=false;
   
   constructor( private c:chariotservice,private router:Router) { 
+    var prevScrollpos = window.pageYOffset;
   
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (currentScrollPos<250) {
+        document.getElementById("navbar").style.backgroundColor = "transparent";
+       
+        document.getElementById("item").style.color = "black";
+ 
+      } else {
+        document.getElementById("navbar").style.backgroundColor = "black";
+        document.getElementById("item").style.color = "white";
+        
+       
+        
+       
+      }
+      prevScrollpos = currentScrollPos;
+    } 
   }
 
   ngOnInit(): void {
