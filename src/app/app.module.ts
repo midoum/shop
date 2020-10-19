@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatBadgeModule} from '@angular/material/badge'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RefrigirateurComponent } from './refrigirateur/refrigirateur.component';
@@ -31,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
    
     MatBadgeModule,
+    MatProgressSpinnerModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

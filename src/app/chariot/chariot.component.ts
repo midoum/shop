@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 })
 
 export class ChariotComponent implements OnInit {
-
+showSpinner:boolean=false;
   chariot:produit[]=[];
  
   constructor(private c:chariotservice,private router:Router) { 
@@ -59,8 +59,17 @@ export class ChariotComponent implements OnInit {
    
     
   }
+  
 addtoCart(){
-
-}
+  if(this.chariot.length>0){
+this.showSpinner=true;
+setTimeout(()=>{
+  this.showSpinner=false;
+  alert("Merci de valider vos achats");
+  this.chariot.splice(0,this.chariot.length);
+},4000);
+}else {
+  alert("Votre chariot est vide");
+}}
 
 }
