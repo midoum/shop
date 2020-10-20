@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Input} from '@angular/core';
 import { produit } from '../produit';
 import { chariotservice } from '../chariotservice';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -23,9 +24,28 @@ new produit('Hppavillon','Ordinateur chic et puissance équipé du processeur am
 new produit('Macbook pro ','Ordinateur pour travail et montage video  equipé du processeur intel core i7 8gb ram et 500GB SSD',3700,'MacbookPro.png',0),
   ];
   
-  constructor(private c:chariotservice) { }
+  constructor(private c:chariotservice,private http:HttpClient) { }
   
   ngOnInit(): void {
+    this.http.get('http://localhost/mypage.php').subscribe(data => {
+      var i=0; 
+      while(data[i]!=null){
+        
+        console.log(data[i]);
+        this.ordins.push(data[i]);
+        i++;
+        
+       }
+       
+      
+        console.log(this.ordins)
+        
+        
+        
+        
+        }, error => console.error(error));
+    
+       
   }
   
  ajouter(name,description,prix,url){
@@ -33,6 +53,7 @@ new produit('Macbook pro ','Ordinateur pour travail et montage video  equipé du
      
   this.c.addChariot(name,description,prix,url);
   console.log(this.c.getChariot());
+  
 }
 
 

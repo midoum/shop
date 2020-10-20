@@ -4,7 +4,8 @@ import { produit } from '../produit';
 import { chariotservice } from '../chariotservice';
 
 
-import { Router } from '@angular/router';
+import { InitialNavigation, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -19,16 +20,16 @@ import { Router } from '@angular/router';
 export class ChariotComponent implements OnInit {
 showSpinner:boolean=false;
   chariot:produit[]=[];
- 
-  constructor(private c:chariotservice,private router:Router) { 
+  data=[];
+  p=[];
+  constructor(private c:chariotservice,private router:Router,private http:HttpClient) { 
     
  
  this.chariot=c.getChariot();
- console.log(this.chariot)
  
  
- 
- 
+   
+   
   }
 
 

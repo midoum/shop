@@ -1,9 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import {MatBadgeModule} from '@angular/material/badge'
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RefrigirateurComponent } from './refrigirateur/refrigirateur.component';
@@ -23,7 +23,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     RefrigirateurComponent,
     FourComponent,
-    HttpClientModule,
     OrdinateurComponent,
     SmartphoneComponent,
     ChariotComponent,
@@ -37,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatBadgeModule,
     MatProgressSpinnerModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
    
