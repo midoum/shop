@@ -35,8 +35,11 @@ showSpinner:boolean=false;
 
 
   ngOnInit(): void {
+
+    
+}
   
-  }
+  
   SommeProduit(){
     var somme =0;
     for(var i=0;i<this.chariot.length;i++){
@@ -65,12 +68,21 @@ addtoCart(){
   if(this.chariot.length>0){
 this.showSpinner=true;
 setTimeout(()=>{
+  var i=0;
+  while(this.chariot[i]!=null){
+  this.http.post('http://localhost/insert.php',this.chariot[i]).subscribe(()=>{
+  
+        },error => console.error(error));
   this.showSpinner=false;
+  i++;
+}
+ 
   alert("Merci de valider vos achats");
   this.chariot.splice(0,this.chariot.length);
 },4000);
 }else {
   alert("Votre chariot est vide");
+
 }}
 
 }

@@ -17,7 +17,7 @@ export class OrdinateurComponent implements OnInit {
   @Input() Ordin:boolean;
   
  
-  ordins :produit[]=[
+  ordins  :produit[]=[
 new produit('Dell core i5','Ordinateur pour travail et programming equipé du processeur intel core i5',1800,'Dellcorei5.png',0),
 new produit('Hp Elitebook','Ordinateur pour gaming et programming equipé du processeur intel core i7 8Gb ram et 500GB SSD',2300,'Hpelitebook.png',0),
 new produit('Hppavillon','Ordinateur chic et puissance équipé du processeur amd ryzen 5 16gb de ram et 1000GB HDD',2900,'Hppavillon.png',0),
