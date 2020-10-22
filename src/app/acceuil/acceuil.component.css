@@ -90,6 +90,12 @@ margin-bottom: 100px;
         margin-left:0px;
         background-color: rgb(74, 190, 74);
     }
+    .copy{
+        text-align: center;
+      width: 100%;
+      height: 30px;
+      background-color: gray;  
+    }
    
     @media screen and (max-width:900px){
         .btn{
