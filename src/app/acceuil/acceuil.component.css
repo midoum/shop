@@ -1,6 +1,6 @@
 
 body{
-    overflow-x: hidden;
+   
     
     position: relative;
    background-color: whitesmoke;
@@ -70,7 +70,7 @@ margin-bottom: 100px;
     }
    
    #products{
-       background-color: gray;
+       background-color: white;
        padding-top: 10px;
        padding-bottom: 10px;
        width: auto;
@@ -90,16 +90,7 @@ margin-bottom: 100px;
         margin-left:0px;
         background-color: rgb(74, 190, 74);
     }
-    #ad1{
-        width: 100%;
-        height: 300px;
-        background-image: url("../../assets/ad.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-       
-        margin-bottom: 10px;
-      
-    }
+   
     @media screen and (max-width:900px){
         .btn{
             margin-left: 150px;

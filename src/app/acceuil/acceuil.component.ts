@@ -17,10 +17,10 @@ export class AcceuilComponent implements OnInit {
   
   constructor( private c:chariotservice,private router:Router) { 
     var prevScrollpos = window.pageYOffset;
-    console.log(prevScrollpos);
-    window.onscroll = function() {
+   
+    window.onscroll= function() {
       var currentScrollPos = window.pageYOffset;
- 
+      console.log(window.pageYOffset)
       if (currentScrollPos<100) {
         document.getElementById("navbar").style.backgroundColor = "transparent";
         document.getElementById("item").style.color = "black";
