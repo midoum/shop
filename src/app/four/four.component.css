@@ -1,16 +1,17 @@
 
 .card{
-   margin-top: 10px;
-   margin-bottom: 10px;
-   height: auto;
+   position: relative;
+   padding-top: 10px;
+  
+   
 
-   width: 14rem;
+   width: 200px;
    
 }
 .img-responsive{
     align-self: center;
-   width: 15%;
-   transition: width 1s,height 1s;
+   width: 50px;
+   transition: width 1s,height 2s;
 }
 .card-text{
     display: none;
@@ -22,5 +23,5 @@
   
 }
 .img-responsive:hover{
-   width: 35%;  
+   width: 60%;  
 }
