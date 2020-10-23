@@ -7,8 +7,7 @@
       <h5 class="card-title" id="prodname">{{produit.name}}</h5>
       <h4>{{produit.prix}}D</h4>
       <a  class="btn btn-primary" (click)="ajouter(produit.name,produit.description,produit.prix,produit.image)">Acheter</a>
-      <a  class="btn btn-success" >Détail</a>
-    </div>
+      <a  class="btn btn-success" (click)="Detail(produit.name,produit.description,produit.prix,produit.image)" >Détail</a>    </div>
   </div>
 
 </div>

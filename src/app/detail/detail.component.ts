@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import{pr,desc,im,na} from '../ordinateur/ordinateur.component'
+import { chariotservice } from '../chariotservice';
+import { detail } from '../detail';
+import { produit } from '../produit';
+
+
 
 @Component({
   selector: 'app-detail',
@@ -7,15 +11,24 @@ import{pr,desc,im,na} from '../ordinateur/ordinateur.component'
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-
-  constructor() {
-    var prix=pr;
-    var description=desc;
-    var image=im;
-    var name=na;
+ details:produit[]=[];
+  constructor(private c:chariotservice,private dservice:detail) {
+    
    }
-
+ 
   ngOnInit(): void {
+    this.details=this.dservice.getdetail();
+    console.log(this.details[0]);
   }
+  
+  getValue(){
+    var f=this.c.getChariot().length;
+    return f;  
+     
+  
+    }
+    ajouter(n,d,p,i){
+      this.c.addChariot(n,d,p,i);
+    }
 
 }

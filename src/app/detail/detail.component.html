@@ -10,19 +10,29 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img src="assets/logo.png" width="80" height="50" class="d-inline-block align-top" routerLink="/acceuil">
+        <button class="btn" id="chariot-btn" type="submit" routerLink="/chariot" >
+     
+            <div matBadge="{{getValue()}}"></div>
+             <img src="assets/cart.png" width="30" height="30" class="d-inline-block align-top"  alt="">
+           </button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-       
+      
           
        
       </nav>  
-      <div class="container">
+      <div class="detail-body" *ngFor="let produit of details" >
     <table class="produit-detail">
-        <tr>Image</tr>
-        <tr ></tr>
-        <tr>Description</tr>
-        <tr>Button</tr>
+        <tr class="image-body"><img class="image-produit" src="../../assets/{{produit.image}}"></tr>
+       <div class="text-body">
+        <tr ><h1 >{{produit.name}}</h1></tr>
+        <tr ><h5 class="description-body">{{produit.description}}</h5></tr>
+        <tr ><h2 class="prix-body">{{produit.prix}}D</h2></tr>
+        
+    </div>
+    <tr> <a  class="btn btn-primary" (click)="ajouter(produit.name,produit.description,produit.prix,produit.image)" >Acheter</a>
+    </tr>
     </table>
       </div>
       <footer class="footer">

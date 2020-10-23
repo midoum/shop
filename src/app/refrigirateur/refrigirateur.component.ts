@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Input} from '@angular/core';
+import { Router } from '@angular/router';
 import { chariotservice } from '../chariotservice';
+import { detail } from '../detail';
 import { produit } from '../produit';
-
+export var nar,descr,prr,imr;
 @Component({
   selector: 'app-refrigirateur',
   templateUrl: './refrigirateur.component.html',
@@ -16,7 +18,7 @@ export class RefrigirateurComponent implements OnInit {
     new produit('samsung','un grand refrigirateur de mark Whirlpool avec un dispencer des cubes de glâce ',2800,'whirlpool.png',0),
 
   ]
-  constructor(private c:chariotservice) { }
+  constructor(private c:chariotservice,private router:Router,private dservice:detail) { }
 
   ngOnInit(): void {
   }
@@ -26,5 +28,9 @@ export class RefrigirateurComponent implements OnInit {
     this.c.addChariot(name,description,prix,url);
     console.log(this.c.getChariot());
   }
-  
+  Detail(n,d,p,i){
+    this.dservice.adddetail(n,d,p,i);
+    
+    this.router.navigate(['detail']);
+    }
 }
