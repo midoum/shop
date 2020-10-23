@@ -3,7 +3,9 @@ import {Input} from '@angular/core';
 import { produit } from '../produit';
 import { chariotservice } from '../chariotservice';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
+export var na,pr,desc,im;
 
 
 @Component({
@@ -15,7 +17,7 @@ import { HttpClient } from '@angular/common/http';
 export class OrdinateurComponent implements OnInit {
   
   @Input() Ordin:boolean;
-  
+ 
  
   ordins  :produit[]=[
 new produit('Dell core i5','Ordinateur pour travail et programming equipé du processeur intel core i5',1800,'Dellcorei5.png',0),
@@ -24,7 +26,7 @@ new produit('Hppavillon','Ordinateur chic et puissance équipé du processeur am
 new produit('Macbook pro ','Ordinateur pour travail et montage video  equipé du processeur intel core i7 8gb ram et 500GB SSD',3700,'MacbookPro.png',0),
   ];
   
-  constructor(private c:chariotservice,private http:HttpClient) { }
+  constructor(private c:chariotservice,private http:HttpClient,private router:Router) { }
   
   ngOnInit(): void {
     this.http.get('http://localhost/mypage.php').subscribe(data => {
@@ -54,6 +56,13 @@ new produit('Macbook pro ','Ordinateur pour travail et montage video  equipé du
   this.c.addChariot(name,description,prix,url);
   console.log(this.c.getChariot());
   
+}
+Detail(n,d,p,i){
+na=n;
+pr=p;
+desc=d;
+im=i;
+this.router.navigate(['detail']);
 }
 
 

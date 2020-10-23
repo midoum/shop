@@ -1,14 +1,19 @@
 <div class="container">
 <div class="row" *ngIf="Ordin">
 
-  <div class="card"  *ngFor="let produit of ordins;let i=index">
+  <div class="card"  *ngFor="let produit of ordins">
+    
+    
     <img class="img-responsive" src="assets/{{produit.image}}" alt="Card image cap">
+  
     <div class="card-body">
       <h7 class="card-title" id="prodname">{{produit.name}}</h7>
-      <p class="card-text" >{{produit.description}}</p>
-      <h4>{{produit.prix}}D</h4>
+     <h4>{{produit.prix}}D</h4>
       <a  class="btn btn-primary" (click)="ajouter(produit.name,produit.description,produit.prix,produit.image)">Acheter</a>
+      <a  class="btn btn-success" (click)="Detail(produit.name,produit.description,produit.prix,produit.image)" >Détail</a>
+
     </div>
   </div>
 </div>
+
 </div>

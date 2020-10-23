@@ -1,5 +1,6 @@
 
 .card{
+ 
     position: relative;
     padding-top: 10px;
    
@@ -11,7 +12,8 @@
  .img-responsive{
      align-self: center;
     width: 50px;
-    transition: width 1s,height 2s;
+    height: 50px;
+    transition: width 1s,height 1s;
  }
  .card-text{
      display: none;
@@ -23,5 +25,11 @@
    
 }
 .img-responsive:hover{
-    width: 60%;  
+   
+    width: 70px;
+    height: 70px;  
+}
+
+.btn{
+    margin-left: 3px;
 }

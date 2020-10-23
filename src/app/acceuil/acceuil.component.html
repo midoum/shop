@@ -22,7 +22,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item"  (click)="ToggleRef()" id="item">Refrigirateur</a>
             <a class="dropdown-item" (click)="ToggleFour()"id="item">Four éléctrique</a>
-            <a class="dropdown-item"id="item" >Mixeur</a>
+           
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -32,7 +32,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a id="item"class="dropdown-item"  (click)="ToggleOrdin()">Ordinateur</a>
             <a id="item"class="dropdown-item"  (click)="ToggleSmart()">SmartPhone</a>
-            <a id="item"class="dropdown-item" >Accessoires</a>
+            
           </div>
         </li>
         
@@ -84,15 +84,16 @@
   </div>
 </div>
   <div  id="prods">
+  
+  <div  id="products">
    
-  <div class="row" id="products">
-   
-    <div id="mainlist" class="col-sm-9">
+    
+      
       <app-refrigirateur [Refri]="showref"></app-refrigirateur>
       <app-ordinateur [Ordin]="showordin"></app-ordinateur>
       <app-four [Four]="showfour"></app-four>
       <app-smartphone [Smart]="showsmart"></app-smartphone>
-    </div>
+    
    
   </div>
  
@@ -105,7 +106,7 @@
     <span clas="text-muted">Fait par Ahmed Meskine <br>
     Email:ahmedmeskine1998@gmail.com
     <br>
-    <a class="btn btn-primary" href="https://www.github.com/midoum/shop" target="blank" id="code">Code Source</a>
+    <a class="btn btn-info" href="https://www.github.com/midoum/shop" target="blank" id="code">Code Source</a>
  </span> 
   </div>
 <div class="copy">Copyright ©</div>

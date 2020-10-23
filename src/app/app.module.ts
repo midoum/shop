@@ -15,6 +15,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { chariotservice } from './chariotservice';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DetailComponent } from './detail/detail.component';
 
 
 
@@ -27,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SmartphoneComponent,
     ChariotComponent,
     AcceuilComponent,
+    DetailComponent,
     
     
   
